@@ -8,7 +8,7 @@ const Carousel = () => {
 
     const [carousel, setCarousel] = useState(1)
 
-    const dataOne = {name: 'Yoga pilate Training', type: 'Training-Fitness', description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus molestiae libero cupiditate",
+    const dataOne = {name: 'Yoga Pilate Training', type: 'Training-Fitness', description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus molestiae libero cupiditate",
     image: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60', price: '$80.00'}
     
     const dataTwo = {name: 'Spiritual Training', type: 'Mental-Fitness', description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus molestiae libero cupiditate", 
@@ -25,7 +25,7 @@ const Carousel = () => {
                 
                 <View style={{width: '60%'}}>
                 <Card.Content>
-                <Title > {dataOne.name} </Title>
+                <Title style={{color: '#0997b5'}} > {dataOne.name} </Title>
                 <Paragraph style={{fontSize: 16}}> {dataOne.type} </Paragraph>
                 <Text style={{marginTop: 5}}> {dataOne.description} </Text>
                 <View style={{flexDirection: 'row', justifyContent: 'space-between', marginTop: 12}}>
@@ -46,7 +46,7 @@ const Carousel = () => {
                     
                     <View style={{width: '60%'}}>
                     <Card.Content>
-                    <Title > {dataTwo.name} </Title>
+                    <Title style={{color: '#0997b5'}} > {dataTwo.name} </Title>
                     <Paragraph style={{fontSize: 16}}> {dataTwo.type} </Paragraph>
                     <Text style={{marginTop: 5}}> {dataTwo.description} </Text>
                     <View style={{flexDirection: 'row', justifyContent: 'space-between', marginTop: 12}}>
