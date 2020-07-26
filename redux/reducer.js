@@ -14,6 +14,10 @@ let data = [
     {
         name: 'Meena', profilePic: 'https://images.unsplash.com/photo-1564923630403-2284b87c0041?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
         place: 'Banglore', detailPlace: 'Blue house road, 9th street, Banglore', status: 'pending'
+    },
+    {
+        name: 'Ziya', profilePic: 'https://images.unsplash.com/photo-1534523600533-71d091d911d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+        place: 'Singapore', detailPlace: 'Blue house road, 9th street, Singapore', status: 'pending'
     }
 ]
 

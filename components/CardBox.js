@@ -40,7 +40,7 @@ const CardBox = ({children, title, progress, name, place, profilePic}) => {
           </View>
           <View style={{flexDirection: 'row', width: '50%'}}>
             <FontAwesome name="handshake-o" size={34} color="#0997b5" />
-            <Text style={{fontSize: 16, width: progressWidth/1.5, marginLeft: '5%'}}>You and Ray had 12 deals  before</Text>
+            <Text style={{fontSize: 16, width: progressWidth/1.5, marginLeft: '5%'}}>You and {name} had 12 deals  before</Text>
           </View>
         </View>
 

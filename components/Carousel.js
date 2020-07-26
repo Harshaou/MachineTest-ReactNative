@@ -61,13 +61,8 @@ const Carousel = () => {
         }
     }
 
-    // const carouselColor = () => {
-    //    if(carousel === 1){
-    //        return 'white'
-    //    } else {
-    //        return 'grey'
-    //    }
-    // }
+    let carouselColor1 = carousel === 1 ? '#cbced1' : '#e6e9ed'
+    let carouselColor2 = carousel === 1 ? '#e6e9ed' : '#cbced1'
 
 
     return (
@@ -75,8 +70,8 @@ const Carousel = () => {
             {renderItem()}
             <TouchableWithoutFeedback onPress={() => carousel === 1 ? setCarousel(2) :  setCarousel(1)}>
             <View style={{flexDirection: 'row', justifyContent: 'center' }}>
-            <Text style={{margin: 1, color:  'grey'}}>⬤</Text>
-            <Text style={{margin: 1, color:  'grey'}}>⬤</Text>
+            <Text style={{margin: 1, color:  carouselColor1}}>⬤</Text>
+            <Text style={{margin: 1, color:  carouselColor2}}>⬤</Text>
             </View>
             </TouchableWithoutFeedback>
             </View>

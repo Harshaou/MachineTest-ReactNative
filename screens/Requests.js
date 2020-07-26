@@ -6,6 +6,7 @@ import CardBox from '../components/CardBox';
 import MidTitle from '../components/MidTitle'
 import RequestBlock from '../components/RequestBlock';
 import ButtonComponent from '../components/ButtonComponent';
+import NoMore from '../components/NoMore';
 
 
 
@@ -41,6 +42,7 @@ const Requests = () => {
               </CardBox>
               )
           }} />
+          <NoMore />
         </ScrollView>
       );
 }
