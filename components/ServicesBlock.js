@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import { Title } from 'react-native-paper';
 import { EvilIcons } from '@expo/vector-icons';
 
-const ServicesBlock = () => {
+const ServicesBlock = ({placeDetail}) => {
     return (
       <View>
         <View style={styles.container}>
@@ -19,7 +19,7 @@ const ServicesBlock = () => {
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
         <EvilIcons name="location" size={24} color="#0997b5" />
           <View >
-            <Title style={{fontSize: 17, color: '#0997b5'}}>50 Hagiwara Tea Garden Dr, San Fransisco, CA 94118</Title>
+            <Title style={{fontSize: 17, color: '#0997b5'}}>{placeDetail}</Title>
         </View>
         </View>
 

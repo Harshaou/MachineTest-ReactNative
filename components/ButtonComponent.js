@@ -4,7 +4,7 @@ import { Button } from 'react-native-paper';
 import {useDispatch} from 'react-redux'
 import { useNavigation } from '@react-navigation/native';
 
-const ButtonComponent = ({type, navigationProp, mode, buttonText1, buttonText2}) => {
+const ButtonComponent = ({ navigationProp, mode, buttonText1, buttonText2, type, name}) => {
 
   const dispatch = useDispatch()
   const navigation = useNavigation();
@@ -12,11 +12,8 @@ const ButtonComponent = ({type, navigationProp, mode, buttonText1, buttonText2})
     return ( 
         <View style={styles.container} >
           <Button theme={theme} mode={mode}>{buttonText1}</Button>
-          <Button onPress={() => { dispatch({type: type}), navigation.navigate(navigationProp)}} theme={theme} mode='contained' >
+          <Button onPress={() => { dispatch({type: type, payload: name}), navigation.navigate(navigationProp)}} theme={theme} mode='contained' >
             {buttonText2} </Button>
-          <View style={{alignItems: 'center'}}>
-          <Button theme={theme} mode='text' icon='dots-horizontal'>More</Button>
-          </View>
         </View>
       );
 }

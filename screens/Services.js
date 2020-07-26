@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import {useSelector} from 'react-redux'
+import { ScrollView, FlatList } from 'react-native';
 import Carousel from '../components/Carousel';
 import CardBox from '../components/CardBox';
 import MidTitle from '../components/MidTitle'
@@ -8,20 +9,38 @@ import ServicesBlock from '../components/ServicesBlock';
 
 
 const Services = () => {
+
+    let data = useSelector(state => state)
+    let upcomingService = data.filter(item => item.status === 'ACTIVE')
+
     return (
-        <View>
+      <ScrollView>
           <Carousel />
-          <CardBox title='Upcoming Service' progress={.5} >
-          <MidTitle title='Check in here or scan customer QR code to check in when the service is about to start' />
-          <ServicesBlock />
-          <ButtonComponent 
-          navigationProp='Payments' 
-          type='payment'
-          buttonText1='Check In'
-          buttonText2='Generate Invoice'
-          mode='contained' />
-          </CardBox>
-        </View>
+          <FlatList data={upcomingService} 
+          renderItem ={({item}) => {
+            return (
+              <CardBox
+              key={item.name}
+              name={item.name} 
+              place={item.place}
+              profilePic={item.profilePic}
+              title='Pending Request' 
+              progress={.5} >
+              <MidTitle 
+              title='Check in here or scan customer QR code to check in when the service about to start' />
+              <ServicesBlock 
+              placeDetail={item.detailPlace} />
+              <ButtonComponent
+              name={item.name}
+              navigationProp='Payments'
+              type='SERVICES' 
+              buttonText1='Check In'
+              buttonText2='Generete invoice'
+              mode='contained' />
+              </CardBox>
+              )
+          }} />
+      </ScrollView>
       );
 }
 
