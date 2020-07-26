@@ -6,6 +6,7 @@ import CardBox from '../components/CardBox';
 import MidTitle from '../components/MidTitle'
 import ButtonComponent from '../components/ButtonComponent';
 import PaymentBlock from '../components/PaymentBlock';
+import NoMore from '../components/NoMore';
 
 const Payments = () => {
 
@@ -40,6 +41,7 @@ const Payments = () => {
               </CardBox>
               )
           }} />
+          <NoMore value={false} content='No more pending payments' />
       </ScrollView>
       );
 }

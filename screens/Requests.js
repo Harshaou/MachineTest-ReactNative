@@ -42,7 +42,7 @@ const Requests = () => {
               </CardBox>
               )
           }} />
-          <NoMore />
+          <NoMore value={true} content='No more pending requests' />
         </ScrollView>
       );
 }

@@ -6,6 +6,7 @@ import CardBox from '../components/CardBox';
 import MidTitle from '../components/MidTitle'
 import ButtonComponent from '../components/ButtonComponent';
 import ServicesBlock from '../components/ServicesBlock';
+import NoMore from '../components/NoMore';
 
 
 const Services = () => {
@@ -40,6 +41,7 @@ const Services = () => {
               </CardBox>
               )
           }} />
+          <NoMore value={false} content='No more services' />
       </ScrollView>
       );
 }

@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Button, Title } from 'react-native-paper';
 
-const NoMore = () => {
-    const [show, setShow] = useState(false)
+const NoMore = ({value, content}) => {
+    const [show, setShow] = useState(value)
 
 
     return (
         <View style={styles.container} >
-            {!show ? <Button onPress={() => setShow(true)} theme={theme}
-             mode='contained'>Show more</Button> : <Title style={{color: '#0997b5'}}>No more booking </Title> }
+            {show ? <Button onPress={() => setShow(false)} theme={theme}
+             mode='contained'>Show more</Button> : <Title style={{color: '#0997b5'}}> {content} </Title> }
         </View>
     );
 }
